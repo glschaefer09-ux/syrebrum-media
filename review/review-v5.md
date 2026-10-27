@@ -1,5 +1,5 @@
 Re-review 10 Syrebrum Shorts after fixes from your last review (footage swap, softer claims, no guarantees, shorter pill). Context you didn't have last time: the phone number (337) 333-4091 is Syrebrum's real support line, shown on syrebrum.com; the Small Business Pack also drafts booking confirmations and has a one-page dashboard (today's appointments, money owed, quotes waiting, follow-ups due).
-Download from https://cdn.jsdelivr.net/gh/glschaefer09-ux/syrebrum-media@COMMIT/reels/v5/syrebrum-<name>.mp4 for: trade-plumber, trade-barber, trade-handyman, trade-painter, tip-late-invoice, tip-good-better-best, tip-missed-call, tip-review-same-day, tip-deposit, tip-quote-followup. Extract frames (fps=1/2, scale=540:960) and check loudness.
+Download from https://cdn.jsdelivr.net/gh/glschaefer09-ux/syrebrum-media@50c855a/reels/v5/syrebrum-<name>.mp4 for: trade-plumber, trade-barber, trade-handyman, trade-painter, tip-late-invoice, tip-good-better-best, tip-missed-call, tip-review-same-day, tip-deposit, tip-quote-followup. Extract frames (fps=1/2, scale=540:960) and check loudness.
 Output (max 250 words) to review.md and print it: one line per video: SHIP or FIX: <exact fix>.
 Scripts:
 
