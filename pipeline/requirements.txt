@@ -1,0 +1,6 @@
+numpy
+pillow
+kokoro-onnx
+soundfile
+faster-whisper
+pytest
