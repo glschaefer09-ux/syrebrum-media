@@ -1,0 +1,13 @@
+kokoro/
+stock/
+tts/
+tts2/
+voices/
+v6/
+v8/
+cand*/
+*.mp4
+*.wav
+*.log
+schedule_*.json
+__pycache__/
