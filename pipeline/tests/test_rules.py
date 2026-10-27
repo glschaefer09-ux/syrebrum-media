@@ -3,8 +3,9 @@ import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
-SOURCES = [p for p in HERE.glob("*.py")]
-PHONE = re.compile(r"\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b")
+SOURCES = sorted(HERE.glob("*.py"))
+TEXTS = SOURCES + [HERE / "README.md"]
+PHONE = re.compile(r"\(?\b\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}\b")
 BANNED = [
     "guaranteed", "never miss a call", "answers your phone", "ai receptionist",
     "texts your customers automatically", "100%", "sends automatically",
@@ -16,7 +17,7 @@ def test_there_are_sources():
 
 
 def test_no_phone_numbers_anywhere():
-    for p in SOURCES:
+    for p in TEXTS:
         hits = PHONE.findall(p.read_text(encoding="utf-8"))
         assert not hits, f"{p.name} contains a phone number: {hits}"
 
@@ -39,9 +40,16 @@ def test_promos_keep_the_approval_promise():
     assert "Nothing goes out" in v6 and "without your OK" in v6
 
 
-def test_metricool_payloads_are_drafts():
-    sched = (HERE / "schedule_v8.py").read_text(encoding="utf-8")
-    assert '"draft":True' in sched.replace(" ", "")
+def test_every_metricool_payload_is_a_draft(tmp_path, monkeypatch):
+    import json, runpy, shutil
+    shutil.copy(HERE / "schedule_v8.py", tmp_path / "schedule_v8.py")
+    runpy.run_path(str(tmp_path / "schedule_v8.py"), run_name="__main__")
+    posts = json.loads((tmp_path / "schedule_v8.json").read_text(encoding="utf-8"))
+    assert posts
+    for post in posts:
+        info = json.loads(post["info"])
+        assert info["draft"] is True, post["date"]
+        assert not PHONE.search(info["text"]), post["date"]
 
 
 def test_no_secrets_in_source():

@@ -1,13 +1,11 @@
-"""Narrated vertical Reels: piper voiceover + synthesized music bed + animated PIL frames."""
+"""Narrated vertical Reels: Kokoro voiceover (audio2) + music bed + animated PIL frames."""
 import json, math, os, subprocess, sys, wave
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-S = os.path.dirname(HERE)
 W, H, FPS, SR = 1080, 1920, 30, 48000
 import audio2
-VOICE = f"{HERE}/voices/en_US-ryan-high.onnx"
 FONTS = os.environ.get("REEL_FONT_DIR", "/usr/share/fonts/opentype/inter")
 B = f"{FONTS}/Inter-Bold.otf"
 XB = f"{FONTS}/Inter-ExtraBold.otf"
@@ -31,15 +29,6 @@ def wrap(d, t, f, maxw):
 
 
 # ---------- audio ----------
-def tts(text, path, speed=0.93):
-    if not os.path.exists(path):
-        subprocess.run([sys.executable, "-m", "piper", "-m", VOICE, "-f", path, "--length-scale", str(speed),
-                        "--sentence-silence", "0.15"], input=text.encode(), check=True, capture_output=True)
-    with wave.open(path) as w:
-        sr = w.getframerate(); a = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
-    n = int(len(a) * SR / sr)
-    return np.interp(np.linspace(0, len(a) - 1, n), np.arange(len(a)), a)
-
 
 def music(total, bpm=100, seed=1):
     t = np.arange(int(total * SR)) / SR

@@ -35,7 +35,7 @@ P=[
  "Car wash and detailing owners: hands wet, who's booking the next car? With Syrebrum, customers book online any hour with no double-booking, and after each car a review request is drafted with your Google review link. You just hit send. Nothing goes out without your OK.",
  "#Shorts #CarDetailing #CarWash #SmallBusiness","Share this with a detailer 🚗","Tag a detailer 👇",["car detailing","car wash business","online booking","small business software","Syrebrum"]),
 ("2026-11-16","promo-spa","Spa & massage: booked while you work #Shorts",
- "Spa and massage owners: you can't answer the phone with oil on your hands. With Syrebrum, clients book online at any hour, it knows your rooms and hours and stops double-booking, and review requests are drafted after each visit. One morning report shows today's bookings. Nothing goes out without your OK.",
+ "Spa and massage owners: you can't answer the phone with oil on your hands. With Syrebrum, clients book online at any hour, it knows your hours and stops double-booking, and review requests are drafted after each visit. One morning report shows today's bookings. Nothing goes out without your OK.",
  "#Shorts #MassageTherapist #Spa #SmallBusiness","Share this with a spa owner 💆","Tag a massage therapist 👇",["massage therapist","spa business","online booking","small business software","Syrebrum"]),
 ]
 out=[]
@@ -56,5 +56,6 @@ for d,k,t,body,h,tail,c,tags in V:
 for d,k,t,body,h,tail,c,tags in P:
     add(d,"16:05",k,True,t,f"{body}\n\nSoftware that works for you, tailored by you. Free beta: https://www.syrebrum.com · plans from $29.99/mo\n{CODE}\n\n{h}",c,tags)
     add(d,"11:35",k,False,t,f"{body}\n\nSoftware that works for you, tailored by you. Need something it doesn't do? Tell us.\n👉 Free beta at syrebrum.com · plans from $29.99/mo\n🎁 {CODE}\n\n{tail}\n\n{h.replace('#Shorts ','')} #Louisiana",c,tags)
-json.dump(out,open("schedule_v8.json","w"),ensure_ascii=False,indent=1)
+import os
+json.dump(out,open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"schedule_v8.json"),"w"),ensure_ascii=False,indent=1)
 print(len(out))

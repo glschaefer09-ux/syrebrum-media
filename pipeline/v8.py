@@ -88,8 +88,8 @@ V8 = {
 "promo-spa": promo(
     "Spa and massage owners. You can't answer the phone with oil on your hands.",
     "Spa & massage owners:", "Oil on your hands. Phone ringing.", "id:701", "id:204214",
-    "Clients book online at any hour. It knows your rooms and your hours, and it stops double-booking.",
-    "Booked while you work", ["Online booking", "Your rooms and hours", "Stops double-booking"],
+    "Clients book online at any hour. It knows your hours, and it stops double-booking.",
+    "Booked while you work", ["Online booking", "Your hours", "Stops double-booking"],
     "After each visit, a review request is drafted, and your morning report shows what's booked today.",
     "Reviews and your day, handled", ["Review requests drafted", "Today's bookings", "One morning report"]),
 }
