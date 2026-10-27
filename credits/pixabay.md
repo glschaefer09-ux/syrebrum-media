@@ -38,3 +38,8 @@
 - https://pixabay.com/videos/id-85347/ by AlexKopeykin
 - https://pixabay.com/videos/id-86252/ by lumosajans
 - https://pixabay.com/videos/id-91/ by Coverr-Free-Footage
+- Pixabay video 240197 — https://pixabay.com/videos/id-240197/ (Pixabay Content License)
+- Pixabay video 148322 — https://pixabay.com/videos/id-148322/ (Pixabay Content License)
+- Pixabay video 65163 — https://pixabay.com/videos/id-65163/ (Pixabay Content License)
+- Pixabay video 66999 — https://pixabay.com/videos/id-66999/ (Pixabay Content License)
+- Pixabay video 32246 — https://pixabay.com/videos/id-32246/ (Pixabay Content License)
