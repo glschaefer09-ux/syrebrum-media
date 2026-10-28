@@ -31,7 +31,7 @@ V9 = {
     "id:154829", "One message builds real trust.", "One message.", "Real trust.", "woman reading phone smiling"),
 "tip-holiday-hours": tip(
     "Holidays are coming. Update your hours on Google before customers show up to a locked door.",
-    "Holidays coming?", "Update your Google hours.", "id:215751",
+    "Holidays coming?", "Update your Google hours.", "id:142641",
     [("Add special hours for every day you're closed or closing early. It takes two minutes.",
       "Set special hours", ["Days you're closed", "Early closing", "Two minutes"]),
      ("Then post a quick update with your holiday schedule, so customers can plan ahead.",
@@ -44,7 +44,7 @@ V9 = {
       "List the top ten", ["Prices", "Areas you cover", "How long it takes"]),
      ("Put the answers on one page, and send the link when someone asks.",
       "One page, one link", ["Plain answers", "Easy to find", "Send the link"])],
-    "id:232538", "Answer once. Save hours.", "Answer once.", "Save hours.", "browsing website laptop"),
+    "id:232538", "Answer once. Save hours.", "Answer once.", "Save hours.", "id:154835"),
 "tip-referral-ask": tip(
     "Your happiest customer is your best salesperson. Make it easy for them.",
     "Happy customer?", "Make referrals easy.", "id:154835",
@@ -52,7 +52,7 @@ V9 = {
       "Ask once", ["Right after the job", "When they're happy", "One simple question"]),
      ("Leave a card or send your link, so passing you along takes them two seconds.",
       "Make it easy", ["Leave a card", "Send your link", "Two seconds to share"])],
-    "id:154829", "Happy customers. More customers.", "Happy customers.", "More customers.", "friends talking coffee"),
+    "id:154829", "Happy customers. More customers.", "Happy customers.", "More customers.", "id:174009"),
 "tip-clear-invoice": tip(
     "Want invoices paid faster? Put these on every one.",
     "Want invoices paid faster?", "Put these on every one.", "id:4728",
